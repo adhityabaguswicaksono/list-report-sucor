@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add/Edit Report</title>
+  <link rel="icon" href="https://drive.google.com/uc?export=view&id=1WJLcd7o-EjpLGKxIZaSIDYRqAy0jhZTG"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+      src="https://kit.fontawesome.com/5c15a3cb74.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/index.js"></script>
+</head>
+
+<body>
+  <nav class="fixed md:mr-24 z-0 top-0 w-full bg-sucorblue">
+    <div class="px-3 py-3 lg:px-5 lg:pl-3">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center justify-start gap-2 text-sucorblue">
+          <button type="button" onclick="functionDropdownNavbar()" id="toogle-sidebar" class="inline-flex justify-center items-center w-8 h-8 bg-white items-center p-2 text-sm ring ring-0 rounded-lg md:hidden">
+              <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="./" class="flex items-center md:ml-64">
+            <img src="https://drive.google.com/uc?export=view&id=1w6ZsT4QHE2CLKzl-8yS5iLhZebv5wZSV" id="logo-navbar" class="h-8 mr-3 block max-w-full max-w-xxs md:hidden" alt="Logo Sucor Sekuritas" />
+          </a>
+        </div>
+        <div class="flex items-center">
+          <div class="flex items-center ml-3">
+            <div>
+              <button type="button" onclick="functionDropdownProfile()" id="dropdown-profile" class="flex text-sm h-10 w-10 bg-sucorblue border border-1 border-white rounded-full overflow-hidden object-cover object-center ring ring-0">
+                <img class="w-10 h-10" src="https://drive.google.com/uc?export=view&id=10HiA33vs9Zu1Nm1SLRraNwpiJhHndnXa" alt="User Photo">
+              </button>
+            </div>
+            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-sucorblue-1 rounded border border-1 border-sucorblue" id="dropdown-user">
+              <div class="px-4 py-3" >
+                <p class="text-sm text-gray-900" >
+                  Adhitya Bagus Wicaksono
+                </p>
+                <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" >
+                  adhitya.wicaksono@student.umn.ac.id
+                </p>
+              </div>
+              <ul class="py-1" >
+                <li>
+                  <a href="#" class="block px-4 py-2 text-sm text-red-700 duration-150 hover:bg-red-700 hover:text-white">Sign out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <aside id="sidebar" class="hidden md:block fixed z-50 top-0 left-0 p-2 z-40 md:w-64 h-screen bg-sucorblue md:border-r md:border-white">
+    <div class="my-2 mx-1 md:my-12 md:mx-3">
+      <button type="button" onclick="functionCloseDropdownNavbar()" id="toogle-close" class="inline-flex justify-center items-center p-2 text-sm text-sucorblue bg-white w-8 h-8 ring ring-0 rounded-lg md:hidden">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <a href="./" class="flex justify-center my-5 md:my-0">
+        <img src="https://drive.google.com/uc?export=view&id=1w6ZsT4QHE2CLKzl-8yS5iLhZebv5wZSV" class="w-full max-w-xs" alt="Logo Sucor Sekuritas" />
+        <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"></span>
+      </a>
+    </div>
+    <div class="h-full px-3 pb-4 overflow-y-auto bg-sucorblue">
+      <ul class="space-y-2">
+        <li>
+          <a href="#" class="flex items-center p-2 text-base font-normal text-white rounded-lg duration-150 hover:bg-white hover:text-sucorblue">
+            <i class="fa-solid fa-house"></i>
+            <span class="ml-3">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center p-2 text-base font-normal text-sucorblue rounded-lg outline outline-0 duration-150 bg-white hover:bg-sucorblue hover:text-white hover:outline-1 hover:border-white">
+            <i class="fa-solid fa-list-ul"></i>
+              <span class="ml-3">List Report</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  
+  <div class="p-4 pt-24 md:ml-64 text-sucorblue">
+    <h3 id="title-navbar" class="text-2xl font-bold whitespace-nowrap">Add/Edit Report</h3>
+    <hr class="my-8 border border-1 border-sucorblue-1 rounded-full"/>
+    <div class="mb-6">
+      <label for="report-name" class="block mb-2 text-sm font-medium text-gray-900">Judul Laporan</label>
+      <input type="text" id="report-name" placeholder="Write here..." class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md block w-full p-2.5 duration-150 focus:ring-sucorblue focus:ring-0 focus:border-sucorblue focus:outline-none">
+    </div>
+    <div class="mb-6">
+      <label for="date-report" class="block mb-2 text-sm font-medium text-gray-900">Tanggal</label>
+      <input type="date" id="date-report" name="" value="1970-01-01" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-sucorblue block w-full p-2.5 duration-150 focus:ring-0 focus:border-sucorblue focus:outline-none">
+    </div>
+    <div class="mb-6 w-full">
+      <label for="file-report" class="block mb-2 text-sm font-medium text-gray-900">File Report</label>
+      <input
+        class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md overflow-hidden focus:ring-sucorblue block w-full duration-150 file:p-2.5 file:border file:border-0 file:bg-sucorblue file:text-white focus:ring-0 focus:border-sucorblue focus:outline-none"
+        type="file"
+        id="file-report"
+        multiple />
+    </div>
+    <div class="flex flex-col gap-2 mb-6">
+      <label class="block mb-2 text-sm font-medium text-gray-900">Pertanyaan Radio</label>
+      <div class="flex items-center">
+        <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 accent-sucorblue accent-sucorblue accent-sucorblue ring ring-0">
+        <label for="default-radio-1" class="ml-2 text-sm text-black">Default radio</label>
+      </div>
+      <div class="flex items-center">
+          <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 accent-sucorblue accent-sucorblue accent-sucorblue ring ring-0">
+          <label for="default-radio-2" class="ml-2 text-sm text-black">Checked state</label>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 mb-6">
+      <label class="block mb-2 text-sm font-medium text-gray-900">Pertanyaan Check</label>
+      <div class="flex items-center">
+        <input id="default-check-1" type="checkbox" value="" name="default-radio" class="w-4 h-4 accent-sucorblue accent-sucorblue accent-sucorblue ring ring-0">
+        <label for="default-check-1" class="ml-2 text-sm text-black">Default radio</label>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2 mb-6">
+      <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Text Area</label>
+      <textarea id="message" rows="4" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md block w-full p-2.5 duration-150 focus:ring-sucorblue focus:ring-0 focus:border-sucorblue focus:outline-none" placeholder="Write your thoughts here..."></textarea>
+    </div>
+    <div class="flex flex-col gap-2 mb-6">
+      <label for="category" class="block mb-2 text-sm font-medium text-gray-900">Select</label>
+      <select id="category" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md block w-full p-2.5 duration-150 focus:ring-sucorblue focus:ring-0 focus:border-sucorblue focus:outline-none">
+        <option value="ayam" selected>Ayam</option>
+        <option value="ikan">Ikan</option>
+        <option value="kucing">Kucing</option>
+        <option value="anjing">Anjing</option>
+        <option value="kuda">Kuda</option>
+      </select>
+    </div>
+    <div class="flex flex-wrap flex-row gap-3 justify-center items-center mt-12">
+      <button type="button" class="rounded-md bg-red-500 px-4 py-2 text-white cursor-pointer duration-150 hover:bg-red-700"><i class="fa-solid fa-xmark"></i> Cancel</button>
+      <button type="button" class="rounded-md bg-blue-500 px-4 py-2 text-white cursor-pointer duration-150 hover:bg-blue-700"><i class="fa-solid fa-check"></i> Submit</button>
+    </div>
+  </div>
+</body>
+</html>

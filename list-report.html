@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://drive.google.com/uc?export=view&id=1WJLcd7o-EjpLGKxIZaSIDYRqAy0jhZTG"/>
+  <title>List Report</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+      src="https://kit.fontawesome.com/5c15a3cb74.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/index.js"></script>
+</head>
+
+<body>
+  <nav class="fixed md:mr-24 z-0 top-0 w-full bg-sucorblue">
+    <div class="px-3 py-3 lg:px-5 lg:pl-3">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center justify-start gap-2 text-sucorblue">
+          <button type="button" onclick="functionDropdownNavbar()" id="toogle-sidebar" class="inline-flex justify-center items-center w-8 h-8 bg-white items-center p-2 text-sm ring ring-0 rounded-lg md:hidden">
+              <i class="fa-solid fa-bars"></i>
+          </button>
+          <a href="./" class="flex items-center md:ml-64">
+            <img src="https://drive.google.com/uc?export=view&id=1w6ZsT4QHE2CLKzl-8yS5iLhZebv5wZSV" id="logo-navbar" class="h-8 mr-3 block max-w-full max-w-xxs md:hidden" alt="Logo Sucor Sekuritas" />
+          </a>
+        </div>
+        <div class="flex items-center">
+          <div class="flex items-center ml-3">
+            <div>
+              <button type="button" onclick="functionDropdownProfile()" id="dropdown-profile" class="flex text-sm h-10 w-10 bg-sucorblue border border-1 border-white rounded-full overflow-hidden object-cover object-center ring ring-0">
+                <img class="w-10 h-10" src="https://drive.google.com/uc?export=view&id=10HiA33vs9Zu1Nm1SLRraNwpiJhHndnXa" alt="User Photo">
+              </button>
+            </div>
+            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-sucorblue-1 rounded border border-1 border-sucorblue" id="dropdown-user">
+              <div class="px-4 py-3" >
+                <p class="text-sm text-gray-900" >
+                  Adhitya Bagus Wicaksono
+                </p>
+                <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" >
+                  adhitya.wicaksono@student.umn.ac.id
+                </p>
+              </div>
+              <ul class="py-1" >
+                <li>
+                  <a href="#" class="block px-4 py-2 text-sm text-red-700 duration-150 hover:bg-red-700 hover:text-white">Sign out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <aside id="sidebar" class="hidden md:block fixed z-50 top-0 left-0 p-2 z-40 md:w-64 h-screen bg-sucorblue md:border-r md:border-white">
+    <div class="my-2 mx-1 md:my-12 md:mx-3">
+      <button type="button" onclick="functionCloseDropdownNavbar()" id="toogle-close" class="inline-flex justify-center items-center p-2 text-sm text-sucorblue bg-white w-8 h-8 ring ring-0 rounded-lg md:hidden">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <a href="./" class="flex justify-center my-5 md:my-0">
+        <img src="https://drive.google.com/uc?export=view&id=1w6ZsT4QHE2CLKzl-8yS5iLhZebv5wZSV" class="w-full max-w-xs" alt="Logo Sucor Sekuritas" />
+        <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"></span>
+      </a>
+    </div>
+    <div class="h-full px-3 pb-4 overflow-y-auto bg-sucorblue">
+      <ul class="space-y-2">
+        <li>
+          <a href="#" class="flex items-center p-2 text-base font-normal text-white rounded-lg duration-150 hover:bg-white hover:text-sucorblue">
+            <i class="fa-solid fa-house"></i>
+            <span class="ml-3">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center p-2 text-base font-normal text-sucorblue rounded-lg outline outline-0 duration-150 bg-white hover:bg-sucorblue hover:text-white hover:outline-1 hover:border-white">
+            <i class="fa-solid fa-list-ul"></i>
+              <span class="ml-3">List Report</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <div class="p-4 pt-24 md:ml-64">
+    <h3 id="title-navbar" class="text-2xl text-sucorblue font-bold whitespace-nowrap">List Report</h3>
+    <hr class="my-8 border border-1 border-sucorblue-1 rounded-full"/>
+    <div class="mb-8 text-end">
+      <a href="./add-edit-page.html">
+        <button type="button" class="rounded-md bg-green-500 px-4 py-2 text-white cursor-pointer duration-150 hover:bg-green-700"><i class="fa-solid fa-plus"></i> Add Report</button>
+      </a>
+    </div>
+    <div class="overflow-x-auto rounded-md">
+      <table class="w-full text-sm text-left">
+        <thead class="text-xs text-white uppercase bg-sucorblue text-sucorblue">
+          <tr>
+            <th class="px-4 py-3">
+                Product name
+            </th>
+            <th class="px-4 py-3">
+                Color
+            </th>
+            <th class="px-4 py-3">
+                Category
+            </th>
+            <th class="px-4 py-3">
+                Price
+            </th>
+            <th class="px-4 py-3">
+                Action
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-white border-b text-black border-sucorblue-0 duration-150 hover:bg-sucorblue-0">
+            <td class="px-4 py-4">
+                Apple MacBook Pro 17"
+            </td>
+            <td class="px-4 py-4">
+                Silver
+            </td>
+            <td class="px-4 py-4">
+                Laptop
+            </td>
+            <td class="px-4 py-4">
+                $2999
+            </td>
+            <td class="px-4 py-4 flex flex-wrap gap-2">
+              <a href="#" class="">
+                <button type="button" class="rounded-full bg-blue-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-blue-700"><i class="fa-solid fa-circle-info"></i> Detail</button>
+              </a>
+              <a href="./add-edit-page.html" class="">
+                <button type="button" class="rounded-full bg-yellow-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-yellow-700"><i class="fa-solid fa-pen"></i> Edit</button>
+              </a>
+              <a href="#" class="">
+                <button type="button" class="rounded-full bg-red-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-red-700"><i class="fa-solid fa-trash"></i> Delete</button>
+              </a>
+            </td>
+          </tr>
+          <tr class="bg-white border-b text-black border-sucorblue-0 duration-150 hover:bg-sucorblue-0">
+            <td class="px-4 py-4">
+                Apple MacBook Pro 17"
+            </td>
+            <td class="px-4 py-4">
+                Silver
+            </td>
+            <td class="px-4 py-4">
+                Laptop
+            </td>
+            <td class="px-4 py-4">
+                $2999
+            </td>
+            <td class="px-4 py-4 flex flex-wrap gap-2">
+              <a href="#" class="">
+                <button type="button" class="rounded-full bg-blue-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-blue-700"><i class="fa-solid fa-circle-info"></i> Detail</button>
+              </a>
+              <a href="./add-edit-page.html" class="">
+                <button type="button" class="rounded-full bg-yellow-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-yellow-700"><i class="fa-solid fa-pen"></i> Edit</button>
+              </a>
+              <a href="#" class="">
+                <button type="button" class="rounded-full bg-red-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-red-700"><i class="fa-solid fa-trash"></i> Delete</button>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
