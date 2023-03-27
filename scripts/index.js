@@ -37,3 +37,19 @@ function functionCloseDropdownNavbar() {
   document.getElementById('sidebar').classList.add('hidden');
   document.getElementById('sidebar').classList.remove('w-full');
 }
+
+document.addEventListener(
+  'click',
+  function (event) {
+    if (
+      event.target.matches('#dropdown-user') ||
+      !event.target.closest('#dropdown-profile')
+    ) {
+      document.getElementById('dropdown-user').classList.add('hidden');
+      document
+        .getElementById('dropdown-user')
+        .classList.remove('absolute', 'top-14', 'right-4');
+    }
+  },
+  false
+);
