@@ -16,7 +16,11 @@
       <div class="flex items-center justify-between">
         <div class="flex items-center justify-start gap-2 text-sucorblue">
           <button type="button" onclick="functionDropdownNavbar()" id="toogle-sidebar" class="inline-flex justify-center items-center w-8 h-8 bg-white items-center p-2 text-sm ring ring-0 rounded-lg md:hidden">
-              <i class="fa-solid fa-bars"></i>
+            <span>
+              <svg class="h-5 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+              </svg>              
+            </span>
           </button>
           <a href="./" class="flex items-center md:ml-64">
             <img src="https://drive.google.com/uc?export=view&id=1w6ZsT4QHE2CLKzl-8yS5iLhZebv5wZSV" id="logo-navbar" class="h-8 mr-3 block max-w-full max-w-xxs md:hidden" alt="Logo Sucor Sekuritas" />
@@ -53,7 +57,9 @@
   <aside id="sidebar" class="hidden md:block fixed z-50 top-0 left-0 p-2 z-40 md:w-64 h-screen bg-sucorblue md:border-r md:border-white">
     <div class="my-2 mx-1 md:my-12 md:mx-3">
       <button type="button" onclick="functionCloseDropdownNavbar()" id="toogle-close" class="inline-flex justify-center items-center p-2 text-sm text-sucorblue bg-white w-8 h-8 ring ring-0 rounded-lg md:hidden">
-        <i class="fa-solid fa-xmark"></i>
+        <span>
+          <svg class="h-5 w-5"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
+        </span>
       </button>
       <a href="./" class="flex justify-center my-5 md:my-0">
         <img src="https://drive.google.com/uc?export=view&id=1w6ZsT4QHE2CLKzl-8yS5iLhZebv5wZSV" class="w-full max-w-xs" alt="Logo Sucor Sekuritas" />
@@ -63,14 +69,20 @@
       <ul class="space-y-2">
         <li>
           <a href="#" class="flex items-center p-2 text-base font-normal text-white rounded-lg duration-150 hover:bg-white hover:text-sucorblue">
-            <i class="fa-solid fa-house"></i>
+            <span>
+              <svg class="h-5 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>              
+            </span>
             <span class="ml-3">Dashboard</span>
           </a>
         </li>
         <li>
           <a href="#" class="flex items-center p-2 text-base font-normal text-sucorblue rounded-lg outline outline-0 duration-150 bg-white hover:bg-sucorblue hover:text-white hover:outline-1 hover:border-white">
-            <i class="fa-solid fa-list-ul"></i>
-              <span class="ml-3">List Report</span>
+            <span>
+              <svg class="h-5 w-5"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="9" y1="6" x2="20" y2="6" />  <line x1="9" y1="12" x2="20" y2="12" />  <line x1="9" y1="18" x2="20" y2="18" />  <line x1="5" y1="6" x2="5" y2="6.01" />  <line x1="5" y1="12" x2="5" y2="12.01" />  <line x1="5" y1="18" x2="5" y2="18.01" /></svg>
+            </span>
+            <span class="ml-3">List Report</span>
           </a>
         </li>
       </ul>
@@ -129,8 +141,12 @@
       </select>
     </div>
     <div class="flex flex-wrap flex-row gap-3 justify-center items-center mt-12">
-      <button type="button" class="rounded-md bg-red-500 px-4 py-2 text-white cursor-pointer duration-150 hover:bg-red-700"><i class="fa-solid fa-xmark"></i> Cancel</button>
-      <button type="button" class="rounded-md bg-blue-500 px-4 py-2 text-white cursor-pointer duration-150 hover:bg-blue-700"><i class="fa-solid fa-check"></i> Submit</button>
+      <button type="button" class="rounded-md bg-red-500 px-4 py-2 text-white cursor-pointer duration-150 hover:bg-red-700">
+        <svg class="h-5 w-5 inline-block"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg> Cancel
+      </button>
+      <button type="button" class="rounded-md bg-blue-500 px-4 py-2 text-white cursor-pointer duration-150 hover:bg-blue-700">
+        <svg class="h-5 w-5 inline-block"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M5 12l5 5l10 -10" /></svg> Submit
+      </button>
     </div>
   </div>
 </body>
