@@ -7,11 +7,7 @@
   <link rel="icon" href="https://drive.google.com/uc?export=view&id=1WJLcd7o-EjpLGKxIZaSIDYRqAy0jhZTG"/>
   <title>List Report</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script
-      src="https://kit.fontawesome.com/5c15a3cb74.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./scripts/index.js"></script>
+  <script src="./scripts/index.js"></script>
 </head>
 
 <body>
@@ -20,7 +16,11 @@
       <div class="flex items-center justify-between">
         <div class="flex items-center justify-start gap-2 text-sucorblue">
           <button type="button" onclick="functionDropdownNavbar()" id="toogle-sidebar" class="inline-flex justify-center items-center w-8 h-8 bg-white items-center p-2 text-sm ring ring-0 rounded-lg md:hidden">
-              <i class="fa-solid fa-bars"></i>
+            <span>
+              <svg class="h-5 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+              </svg>              
+            </span>
           </button>
           <a href="./" class="flex items-center md:ml-64">
             <img src="https://drive.google.com/uc?export=view&id=1w6ZsT4QHE2CLKzl-8yS5iLhZebv5wZSV" id="logo-navbar" class="h-8 mr-3 block max-w-full max-w-xxs md:hidden" alt="Logo Sucor Sekuritas" />
@@ -57,7 +57,9 @@
   <aside id="sidebar" class="hidden md:block fixed z-50 top-0 left-0 p-2 z-40 md:w-64 h-screen bg-sucorblue md:border-r md:border-white">
     <div class="my-2 mx-1 md:my-12 md:mx-3">
       <button type="button" onclick="functionCloseDropdownNavbar()" id="toogle-close" class="inline-flex justify-center items-center p-2 text-sm text-sucorblue bg-white w-8 h-8 ring ring-0 rounded-lg md:hidden">
-        <i class="fa-solid fa-xmark"></i>
+        <span>
+          <svg class="h-5 w-5"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
+        </span>
       </button>
       <a href="./" class="flex justify-center my-5 md:my-0">
         <img src="https://drive.google.com/uc?export=view&id=1w6ZsT4QHE2CLKzl-8yS5iLhZebv5wZSV" class="w-full max-w-xs" alt="Logo Sucor Sekuritas" />
@@ -67,14 +69,20 @@
       <ul class="space-y-2">
         <li>
           <a href="#" class="flex items-center p-2 text-base font-normal text-white rounded-lg duration-150 hover:bg-white hover:text-sucorblue">
-            <i class="fa-solid fa-house"></i>
+            <span>
+              <svg class="h-5 w-5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>              
+            </span>
             <span class="ml-3">Dashboard</span>
           </a>
         </li>
         <li>
           <a href="#" class="flex items-center p-2 text-base font-normal text-sucorblue rounded-lg outline outline-0 duration-150 bg-white hover:bg-sucorblue hover:text-white hover:outline-1 hover:border-white">
-            <i class="fa-solid fa-list-ul"></i>
-              <span class="ml-3">List Report</span>
+            <span>
+              <svg class="h-5 w-5"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="9" y1="6" x2="20" y2="6" />  <line x1="9" y1="12" x2="20" y2="12" />  <line x1="9" y1="18" x2="20" y2="18" />  <line x1="5" y1="6" x2="5" y2="6.01" />  <line x1="5" y1="12" x2="5" y2="12.01" />  <line x1="5" y1="18" x2="5" y2="18.01" /></svg>
+            </span>
+            <span class="ml-3">List Report</span>
           </a>
         </li>
       </ul>
@@ -87,7 +95,14 @@
     <div class="flex flex-col md:flex-row flex-wrap mb-8 gap-3">
       <input type="text" id="search" placeholder="Search here..." class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md block p-2.5 grow duration-150 focus:ring-sucorblue focus:ring-0 focus:border-sucorblue focus:outline-none">
       <a href="./add-edit-page.html">
-        <button type="button" class="w-full md:w-fit md:grow-0 rounded-md bg-green-500 px-4 py-2.5 text-white cursor-pointer duration-150 hover:bg-green-700"><i class="fa-solid fa-plus"></i> Add Report</button>
+        <button type="button" class="w-full md:w-fit md:grow-0 rounded-md bg-green-500 px-4 py-2.5 text-white cursor-pointer duration-150 hover:bg-green-700">
+          <span class="inline-block">
+            <svg class="h-5 w-5 inline-block"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+              <path stroke="none" d="M0 0h24v24H0z"/>  
+              <line x1="12" y1="5" x2="12" y2="19" />  
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </span> Add Report</button>
       </a>
     </div>
     <div class="overflow-x-auto rounded-md">
@@ -127,13 +142,34 @@
             </td>
             <td class="px-4 py-4 flex flex-wrap gap-2">
               <a href="#" class="">
-                <button type="button" class="rounded-full bg-blue-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-blue-700"><i class="fa-solid fa-circle-info"></i> Detail</button>
+                <button type="button" class="rounded-full bg-blue-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-blue-700">
+                  <svg class="h-4 w-4 inline-block"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  
+                    <circle cx="12" cy="12" r="10" />  
+                    <line x1="12" y1="16" x2="12" y2="12" />  
+                    <line x1="12" y1="8" x2="12.01" y2="8" />
+                  </svg>
+                   Detail</button>
               </a>
               <a href="./add-edit-page.html" class="">
-                <button type="button" class="rounded-full bg-yellow-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-yellow-700"><i class="fa-solid fa-pen"></i> Edit</button>
+                <button type="button" class="rounded-full bg-yellow-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-yellow-700">
+                  <svg class="h-4 w-4 inline-block"  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+                    <path stroke="none" d="M0 0h24v24H0z"/>  
+                    <path d="M9 7 h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />  
+                    <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />  
+                    <line x1="16" y1="5" x2="19" y2="8" />
+                  </svg> Edit</button>
               </a>
               <a href="#" class="">
-                <button type="button" class="rounded-full bg-red-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-red-700"><i class="fa-solid fa-trash"></i> Delete</button>
+                <button type="button" class="rounded-full bg-red-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-red-700">
+                  <svg class="h-4 w-4 inline-block"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+                    <path stroke="none" d="M0 0h24v24H0z"/>  
+                    <line x1="4" y1="7" x2="20" y2="7" />  
+                    <line x1="10" y1="11" x2="10" y2="17" />  
+                    <line x1="14" y1="11" x2="14" y2="17" />  
+                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />  
+                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                  </svg>
+                 Delete</button>
               </a>
             </td>
           </tr>
@@ -152,13 +188,34 @@
             </td>
             <td class="px-4 py-4 flex flex-wrap gap-2">
               <a href="#" class="">
-                <button type="button" class="rounded-full bg-blue-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-blue-700"><i class="fa-solid fa-circle-info"></i> Detail</button>
+                <button type="button" class="rounded-full bg-blue-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-blue-700">
+                  <svg class="h-4 w-4 inline-block"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  
+                    <circle cx="12" cy="12" r="10" />  
+                    <line x1="12" y1="16" x2="12" y2="12" />  
+                    <line x1="12" y1="8" x2="12.01" y2="8" />
+                  </svg>
+                   Detail</button>
               </a>
               <a href="./add-edit-page.html" class="">
-                <button type="button" class="rounded-full bg-yellow-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-yellow-700"><i class="fa-solid fa-pen"></i> Edit</button>
+                <button type="button" class="rounded-full bg-yellow-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-yellow-700">
+                  <svg class="h-4 w-4 inline-block"  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+                    <path stroke="none" d="M0 0h24v24H0z"/>  
+                    <path d="M9 7 h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />  
+                    <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />  
+                    <line x1="16" y1="5" x2="19" y2="8" />
+                  </svg> Edit</button>
               </a>
               <a href="#" class="">
-                <button type="button" class="rounded-full bg-red-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-red-700"><i class="fa-solid fa-trash"></i> Delete</button>
+                <button type="button" class="rounded-full bg-red-500 px-4 py-1 text-white cursor-pointer duration-150 hover:bg-red-700">
+                  <svg class="h-4 w-4 inline-block"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+                    <path stroke="none" d="M0 0h24v24H0z"/>  
+                    <line x1="4" y1="7" x2="20" y2="7" />  
+                    <line x1="10" y1="11" x2="10" y2="17" />  
+                    <line x1="14" y1="11" x2="14" y2="17" />  
+                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />  
+                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                  </svg>
+                 Delete</button>
               </a>
             </td>
           </tr>
@@ -168,7 +225,11 @@
     <div class="text-center mt-8">
       <ul class="inline-flex -space-x-px">
         <li>
-          <a href="#" class="px-2 md:px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-md duration-150 hover:ease-in-out hover:bg-gray-100 hover:text-gray-700"><i class="fa-solid fa-arrow-left"></i></a>
+          <a href="#" class="px-2 md:px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-md duration-150 hover:ease-in-out hover:bg-gray-100 hover:text-gray-700">
+            <svg class="h-4 w-4 inline-block"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"> 
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </a>
         </li>
         <li>
           <a href="#" aria-current="page" class="px-2 md:px-3 py-2 text-white border border-gray-300 bg-sucorblue duration-150 hover:bg-sucorblue-2 hover:ease-in-out">1</a>
@@ -180,7 +241,11 @@
           <a href="#" class="px-2 md:px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 duration-150 hover:ease-in-out hover:bg-gray-100 hover:text-gray-700">3</a>
         </li>
         <li>
-          <a href="#" class="px-2 md:px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-md duration-150 hover:ease-in-out hover:bg-gray-100 hover:text-gray-700"><i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#" class="px-2 md:px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-md duration-150 hover:ease-in-out hover:bg-gray-100 hover:text-gray-700">
+            <svg class="h-4 w-4 inline-block"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </a>
         </li>
       </ul>
     </div>
