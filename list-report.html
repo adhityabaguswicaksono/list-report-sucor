@@ -13,7 +13,7 @@
 
 <body>
   <nav class="fixed md:mr-24 z-0 top-0 w-full bg-sucorblue">
-    <div class="px-3 py-3 lg:px-5 lg:pl-3">
+    <div class="py-3 px-5 lg:pl-3">
       <div class="flex items-center justify-between">
         <div class="flex items-center justify-start gap-2 text-sucorblue">
           <button type="button" onclick="functionDropdownNavbar()" id="toogle-sidebar" class="inline-flex justify-center items-center w-8 h-8 bg-white items-center p-2 text-sm ring ring-0 rounded-lg md:hidden">
@@ -34,7 +34,7 @@
                 <img class="w-10 h-10" src="https://drive.google.com/uc?export=view&id=10HiA33vs9Zu1Nm1SLRraNwpiJhHndnXa" alt="User Photo">
               </button>
             </div>
-            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-sucorblue-1 rounded border border-1 border-sucorblue" id="dropdown-user">
+            <div class="z-50 top-14 absolute my-4 text-base list-none bg-white divide-y divide-sucorblue-1 rounded border border-1 border-sucorblue translate-x-full transition-all duration-500 ease-in-out right-0" id="dropdown-user">
               <div class="px-4 py-3" >
                 <p class="text-sm text-gray-900" >
                   Adhitya Bagus Wicaksono
@@ -55,7 +55,7 @@
     </div>
   </nav>
 
-  <aside id="sidebar" class="hidden md:block fixed z-50 top-0 left-0 p-2 z-40 md:w-64 h-screen bg-sucorblue md:border-r md:border-white">
+  <aside id="sidebar" class="fixed z-50 top-0 left-0 p-2 z-40 w-full md:w-64 md:translate-x-0 h-screen bg-sucorblue md:border-r md:border-white -translate-x-full transition-all duration-500 ease-in-out">
     <div class="my-2 mx-1 md:my-12 md:mx-3">
       <button type="button" onclick="functionCloseDropdownNavbar()" id="toogle-close" class="inline-flex justify-center items-center p-2 text-sm text-sucorblue bg-white w-8 h-8 ring ring-0 rounded-lg md:hidden">
         <span>
