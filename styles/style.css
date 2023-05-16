@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Cera Pro Regular";
+  src: url("../fonts/Cera\ Pro\ Regular.otf");
+}
+
+@font-face {
+  font-family: "Cera Pro Bold";
+  src: url("../fonts/Cera\ Pro\ Bold.otf");
+}

@@ -1,5 +1,0 @@
-Picture for Login Form: https://unsplash.com/photos/PhYq704ffdA
-Login Form: https://tailwindcomponents.com/component/login-page-4
-SideBar: https://flowbite.com/docs/components/sidebar/#sidebar-with-navbar
-Icon: https://www.tailwindtoolbox.com/icons
-Color Creation: https://m2.material.io/design/color/the-color-system.html#color-theme-creation (You can do this with Figma Plugin)
