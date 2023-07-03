@@ -496,18 +496,17 @@
               start: "2023-01-28",
             },
           ],
+          // Tooltip for Calendar
+          eventDidMount: function (info) {
+            var tooltip = tippy(info.el, {
+              content: info.el.querySelector(".fc-event-title").innerHTML,
+              placement: "top",
+              interactive: true,
+            });
+          },
         });
 
         calendar.render();
-      });
-
-      // Tooltip for Calendar
-      $(document).on("mouseenter mouseleave", ".fc-event-title", function (e) {
-        if (e.type === "mouseenter") {
-          tippy(e.currentTarget, {
-            content: e.currentTarget.innerText,
-          });
-        }
       });
     </script>
 
